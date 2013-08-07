@@ -9,5 +9,9 @@ div#header {
 }
 
 div#body {
-    padding: 0px 30px 30px 30px;
+    padding: 0px 30px 10px 30px;
+}
+
+li {
+    padding-bottom: 1px;
 }
