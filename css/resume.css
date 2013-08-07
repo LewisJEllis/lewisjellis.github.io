@@ -1,0 +1,13 @@
+div#container {
+    padding-top: 5px;
+    width: 960px;
+    font-family: Calibri;
+}
+
+div#header {
+    text-align: center;
+}
+
+div#body {
+    padding: 0px 30px 30px 30px;
+}
