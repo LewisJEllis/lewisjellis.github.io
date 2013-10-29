@@ -67,6 +67,14 @@ h1 {
   font-weight: bold;
 }
 
+div#about {
+  color: #222;
+}
+
+div#about a {
+  color: #666;
+}
+
 div#links {
   text-align: right;
   margin-bottom: 0px;
