@@ -7,6 +7,15 @@ img {
   box-shadow: 0 0 2px #eee;
 }
 
+li {
+  margin-bottom: 1px;
+  margin-left: 6px;
+}
+
+ul {
+  margin-bottom:12px;
+}
+
 div#header{
   float:left;
   border-bottom-style:solid;
@@ -44,7 +53,8 @@ div#bottomleft {
 
 div#bottomright {
   float: left;
-  padding: 4px;
+  padding-top: 4px;
+  padding-left:6px;
   border-left-style: solid;
   border-left-width: 5px;
   border-left-color: #3ae;
