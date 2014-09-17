@@ -1,0 +1,183 @@
+% resume.tex
+% vim:set ft=tex spell:
+
+\documentclass[10pt,letterpaper]{article}
+\usepackage[letterpaper,margin=0.75in,tmargin=0.6in,bmargin=0.5in]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage{mdwlist}
+\usepackage[T1]{fontenc}
+\usepackage{textcomp}
+\usepackage{tgpagella}
+\usepackage{hyperref}
+\hypersetup{colorlinks=true,
+			urlcolor=blue}
+
+
+\pagestyle{empty}
+\setlength{\tabcolsep}{0em}
+
+% indentsection style, used for sections that aren't already in lists
+% that need indentation to the level of all text in the document
+\newenvironment{indentsection}[1]%
+{\begin{list}{}%
+	{\setlength{\leftmargin}{#1}}%
+	\item[]%
+}
+{\end{list}}
+
+% opposite of above; bump a section back toward the left margin
+\newenvironment{unindentsection}[1]%
+{\begin{list}{}%
+	{\setlength{\leftmargin}{-0.5#1}}%
+	\item[]%
+}
+{\end{list}}
+
+% format two pieces of text, one left aligned and one right aligned
+\newcommand{\headerrow}[2]
+{\begin{tabular*}{\linewidth}{l@{\extracolsep{\fill}}r}
+	#1 &
+	#2 \\
+\end{tabular*}}
+
+% make "C++" look pretty when used in text by touching up the plus signs
+\newcommand{\CPP}
+{C\nolinebreak[4]\hspace{-.05em}\raisebox{.22ex}{\footnotesize\bf ++}}
+
+% and the actual content starts here
+\begin{document}
+\begin{center}
+{\LARGE \textbf{Lewis J. Ellis}}
+
+\vspace{0.3em}
+\hspace{-1.5em}
+me@LewisJEllis.com\ \ \textbullet
+\ \ \href{http://lewisjellis.com}{LewisJEllis.com}
+\end{center}
+
+\hrule
+\vspace{-0.7em}
+\subsection*{Work Experience}
+
+\begin{itemize}
+	\parskip=0.02em
+
+	\item
+	\headerrow
+		{\textbf{Shape Security}}
+		{\textbf{Mountain View, CA}}
+	\\
+	\headerrow
+		{\emph{Software Engineering Intern, KPCB Engineering Fellow}}
+		{\emph{May -- August 2014}}
+	\begin{itemize*}
+		\item Built a robust, high-volume event collector, later used to receive and channel data for analytics.
+		\item Used CasperJS to test and debug the core transformation engine \& various attack countermeasures.
+		\item Built \& documented the main attack launcher component of a new R\&D verification platform, then supported other engineers and researchers using the platform to test attacks against Shape's technology.
+	\end{itemize*}
+
+	\item
+	\headerrow
+		{\textbf{App.net}}
+		{\textbf{San Francisco, CA}}
+	\\
+	\headerrow
+		{\emph{Software Engineering Intern}}
+		{\emph{May -- August 2013}}
+	\begin{itemize*}
+		\item Restructured test suites to reduce build times by 15\%
+		\item Migrated user search indexing from Solr to ElasticSearch, built a metric to improve place search results
+		\item Designed and implemented extensive improvements to annotations on API objects, making it easier for third party apps to represent relationships between posts, users, places, files, and media.
+	\end{itemize*}
+
+	\item
+	\headerrow
+		{\textbf{Canada/USA Mathcamp}}
+		{\textbf{Tacoma, WA}}
+	\\
+	\headerrow
+		{\emph{Junior Counselor}}
+		{\emph{June -- August 2012}}
+	\begin{itemize*}
+		\item Planned and excited the camp-wide hiking trip, talent show, and feedback surveys; managed camp finances and visitor accommodations; taught campers to speed cube; made lots of liquid nitrogen ice cream
+	\end{itemize*}
+
+	\item
+	\headerrow
+		{\textbf{University of Pennsylvania}}
+		{\textbf{Philadelphia, PA}}
+	\\
+	\headerrow
+		{\emph{Teaching Assistant \& Head Teaching Assistant}}
+		{\emph{Spring 2012 -- Present}}
+	\begin{itemize*}
+		\item CIS 120, Programming Languages \& Techniques, with OCaml and Java, 4 semesters.
+		\item CIS 121, Data Structures \& Algorithms, with proofs and Java, 1 semester.
+		\item \href{http://www.seas.upenn.edu/~cis160/14fa/index.shtml}{CIS 160}, Mathematical Foundations of CS, current head TA. Lead 18 TAs, manage course website.
+	\end{itemize*}
+
+\end{itemize}
+
+\hrule
+\vspace{-0.7em}
+\subsection*{Education}
+
+\begin{itemize}
+	\parskip=0.0em
+
+	\item 
+	\headerrow
+		{\textbf{University of Pennsylvania}}
+		{\textbf{Philadelphia, PA}}
+	\\
+	\headerrow
+		{\emph{School of Engineering and Applied Science, expected BSE May 2015. GPA: 3.6}}
+		{\emph{Fall 2011 -- Present}}
+	\begin{itemize*}
+		\item Networked and Social Systems, a branch of CS focusing on applications of network theory.
+		\item Coursework: Artificial Intelligence, Algorithms, Databases, Advanced Functional Programming, Crowdsourcing, Cloud Computing, Networked Systems, Theory of Networks, Network Security, Cryptography, Game Theory, Stochastic Systems, Optimization, Probability, Linear Algebra, Discrete Math
+		\item Former developer with \href{http://pennlabs.org/}{PennLabs}, a student group dedicated to building technology for student use
+		\item Organizer of \href{http://pennapps.com}{PennApps}, the premier college hackathon, hosted at Penn each semester
+		\item Lead organizer of \href{http://pclassic.org}{PClassic}, a semesterly high school programming contest with 100s of participants
+		\item Current \href{http://www.dolphin.upenn.edu/ultimate/void/}{Penn Ultimate} player, former \href{http://www.pennathletics.com/SportSelect.dbml?DB_OEM_ID=1700&SPID=542&SPSID=8693&DB_OEM_ID=1700}{Penn Track \& Field} long jumper
+	\end{itemize*}
+
+\end{itemize}
+
+\hrule
+\vspace{-0.7em}
+\subsection*{Projects}
+
+\begin{itemize}
+	\parskip=-0.1em
+
+	\item
+	\href{https://github.com/LewisJEllis/awesome-lua}{awesome-lua} (Summer 2014). High-quality compilation of the modern Lua ecosystem with 300+ GitHub stars.
+	\item
+	\href{https://github.com/maxscheiber/cumulonimbus}{Cumulonimbus} (Finalist, Greylock Hackfest 2014). Seamlessly joins multiple cloud storage accounts into one.
+	\item
+	ABCrowd (Fall 2013). Use MTurk to enable sites/projects without the requisite traffic for effective A/B testing to get quantitative feedback. Lets users build questionnaires, then launches them and compiles the results.
+	\item
+	\href{https://github.com/yefim/DBIDE}{Dropbox IDE} (2nd place, HackRU Fall 2012). In-browser IDE which uses Dropbox as the user's workspace.
+	\item
+	PSPNet, PSPTD (2008). Text-based web browser, tower defense game, written in Lua for the PlayStation Portable. PSPTD was released to the home-brew community and downloaded over 1000 times.
+\end{itemize}
+
+
+\hrule
+\vspace{-0.7em}
+\subsection*{Skills \& Technologies}
+
+\begin{indentsection}{\parindent}
+\hyphenpenalty=1000
+\begin{description*}
+	\item[Languages, etc:]
+	Lua, JavaScript, Python, Haskell, OCaml, Java, SQL, Redis, MongoDB, \LaTeX
+	\item[Tools, platforms, etc:] Sublime, git, Node, Flask, OpenResty, AWS, MTurk, MapReduce, ElasticSearch
+	\item[Familiar:] Go, C, \CPP, Ruby, Common LISP, HTML/CSS
+	\item[APIs:] Experience in API design; have used App.net, Dropbox, Venmo, Twilio, Google, Facebook, Twitter APIs
+	\item[Presenting:] \href{https://github.com/LewisJEllis/eslint101}{ESLint tech talk}, \href{https://github.com/LewisJEllis/nodejs-workshops}{Node.js workshop series}, 3 yrs teaching, 3-time MC of PennApps closing ceremony
+\end{description*}
+\end{indentsection}
+
+\end{document}
