@@ -2,79 +2,40 @@
 <html>
 <head>
   <title>Lewis J. Ellis</title>
-  <link rel="stylesheet" href="css/base.css">
-  <link rel="stylesheet" href="css/skeleton.css">
-  <link rel="stylesheet" href="css/layout.css">
-  <link rel='stylesheet' href="css/style.css">
+  <link rel="stylesheet" href="css/style.css">
   <script src='js/konami.js'></script>
   <script>
     var easter_egg = new Konami('http://lewisjellis.com/whereintheworldishe');
   </script>
 </head>
 <body>
-  <div class='container'>
-    <div id='header'>
-      <div class='twelve columns alpha omega' id='topleft'>
-        <h1 style='text-align:center;padding-left:4px;padding-top:25px;padding-bottom:30px'>Lewis J. Ellis</h1>
-        <div id='links' style="text-align:right">
-          <a class='link' href="/">Home</a><a class='link' href='LewisJEllis.pdf'>Resume</a><a class='link' href='https://github.com/LewisJEllis'>Github</a><a class='link' href='http://twitter.com/LewisJEllis'>Twitter</a><a class='link' href='http://app.net/lewisjellis'>App.net</a><a class='link' href='http://www.linkedin.com/in/lewisjellis/'>Linked.in</a><a class='link' href='mailto:me@lewisjellis.com'>Email</a>
-        </div>
-      </div>
-      <div class='four columns alpha' id='topright'>
-      </div>
+  <div id="container">
+    <div id="about"><p>
+      Hi, I'm Lewis J. Ellis.<br/>
+      I go to <a href='http://www.upenn.edu/'>Penn</a> and write Lua, JavaScript, and Python.
+      </p><p>
+      I've worked for <a href='https://www.shapesecurity.com/'>Shape Security</a>, <a href='https://app.net/'>App.net</a>, and <a href='http://pennlabs.org/'>PennLabs</a>.<br/>
+      I've organized <a href='http://pennapps.com'>PennApps</a>, <a href='http://pclassic.org/'>PClassic</a>, and <a href='http://www.mathcamp.org/'>Mathcamp</a>.
+      </p><p>
+      I like clean code, math, fancy headphones, biking, ultimate, basketball, climbing, cubing, and teaching.
+      </p>
     </div>
-    <div class='twelve columns alpha omega' id='bottomleft'>
-    </div>
-    <div class='four columns alpha' id='bottomright'>
-      <div id='about'>
-        present
-        <ul>
-        <li>student at <a href='http://www.upenn.edu/'>penn</a> in <a href='http://www.nets.upenn.edu/'>nets</a>
-        <li>lead teaching assistant for cis160
-        <li>lead organizer of <a href='http://dp.seas.upenn.edu/pclassic.html'>pclassic</a>
-        <li>brother of <a href='http://www.penn-lambdachi.org/'>lambda chi</a>
-        </ul>
-        past
-        <ul>
-        <li>intern at <a href='http://http://www.shapesecurity.com/'>shape security</a>
-        <li>intern at <a href='http://app.net'>app.net</a>
-        <li>organizer of <a href='http://pennapps.com'>pennapps</a>
-        <li>developer with <a href='http://labs.pennapps.com/'>pennapps labs</a>
-        <li>teaching assistant for <a href='http://www.seas.upenn.edu/~cis120/'>cis120</a>
-        <li>teaching assistant for <a href='http://www.seas.upenn.edu/~cis121/'>cis121</a>
-        <li><a href='http://www.mathcamp.org'>mathcamper</a>
-        </ul>
-        tech
-        <ul>
-        <li>javascript, node
-        <li>python, flask
-        <li>lua, openresty
-        <li>haskell, ocaml
-        <li>java, hadoop
-        <li>aws, mturk
-        <li>sql, redis
-        <li>sublime, git
-        </ul>
-        topics
-        <ul>
-        <li>graph and network theory
-        <li>game and information theory
-        <li>security and cryptography
-        <li>probability and algorithms
-        <li>ai and machine learning
-        </ul>
-        activities
-        <ul>
-        <li>former long jumper with <a href='http://www.pennathletics.com/SportSelect.dbml?&DB_OEM_ID=1700&SPID=542&SPSID=8698'>penn</a>
-        <li>ultimate with <a href='http://www.dolphin.upenn.edu/ultimate/void/'>void</a>
-        <li>basketball
-        <li>cycling
-        <li>climbing
-        </ul>
-      </div>
+
+    <div id="links">
+      <ul>
+        <li class='left'><a class='link' href='LewisJEllis.pdf'>Resume</a></li>
+        <li><a class='link' href='https://github.com/LewisJEllis/'>GitHub</a></li>
+        <li><a class='link' href='https://twitter.com/LewisJEllis/'>Twitter</a></li>
+        <li><a class='link' href='http://www.linkedin.com/in/lewisjellis/'>LinkedIn</a></li>
+        <li><a class='link' href=''>Email</a></li>
+      </ul>
     </div>
   </div>
+
   <script>
+    // this should at least stop the dumbest of email scrapers:
+    document.querySelector('ul li:last-child a').href = 'ma' + 'il' + 'to' + String.fromCharCode(58) + 'me' + String.fromCharCode(64) + 'lewisjellis' + String.fromCharCode(46) + 'com';
+
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
     (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
     m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
@@ -82,7 +43,6 @@
 
     ga('create', 'UA-42739772-1', 'lewisjellis.com');
     ga('send', 'pageview');
-
   </script>
 </body>
 </html>
